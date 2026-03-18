@@ -909,7 +909,7 @@ export default function KenestJikoni() {
                 title: "Lunch",
                 emoji: "🍽️",
                 items: [
-                  { name: "Beans", price: 50 },
+                  { name: "Beans", price: 60 },
                   { name: "Rice & Beans", price: 100 },
                   { name: "Ugali & Sukuma", price: 80 },
                   { name: "Ugali & Omena", price: 100 },
@@ -920,7 +920,7 @@ export default function KenestJikoni() {
                 emoji: "🥟",
                 items: [
                   { name: "Smokies", price: 40 },
-                  { name: "Chapati (Lunch)", price: 30 },
+                  { name: "Chapati (Lunch)", price: 20 },
                 ],
               },
             ].map((category, idx) => (
