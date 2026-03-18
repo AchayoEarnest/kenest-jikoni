@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin, Clock, Star, ArrowRight } from 'lucide-react';
 
 export default function KenestJikoni() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,21 +32,14 @@ export default function KenestJikoni() {
 
   // Function to open Google Maps
   const handleGetDirections = () => {
-    // Replace these coordinates with your actual location coordinates
-    // You can find coordinates on Google Maps: right-click location -> coordinates
-    const latitude = -1.2864; // Example: Nairobi coordinates
+    const latitude = -1.2864;
     const longitude = 36.8172;
-    
-    // Create Google Maps URL
     const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
-    
-    // Open in new tab
     window.open(mapsUrl, '_blank');
   };
 
   // Function to call directly
   const handleCallUs = () => {
-    // Replace with your actual phone number
     window.location.href = 'tel:+254712345678';
   };
 
@@ -211,7 +203,7 @@ export default function KenestJikoni() {
                   e.target.style.boxShadow = commonStyles.shadowSmall;
                 }}
               >
-                Visit Now <ArrowRight size={16} />
+                Visit Now →
               </button>
             </div>
           )}
@@ -224,11 +216,12 @@ export default function KenestJikoni() {
                 border: 'none',
                 cursor: 'pointer',
                 color: colors.dark,
-                padding: '0.5rem'
+                padding: '0.5rem',
+                fontSize: '1.5rem'
               }}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {mobileMenuOpen ? '✕' : '☰'}
             </button>
           )}
         </div>
@@ -362,7 +355,7 @@ export default function KenestJikoni() {
                     e.target.style.boxShadow = commonStyles.shadowMedium;
                   }}
                 >
-                  Order Now <ArrowRight size={18} />
+                  Order Now →
                 </button>
                 <button
                   onClick={() => scrollToSection('menu')}
@@ -422,7 +415,7 @@ export default function KenestJikoni() {
                     {[
                       { icon: '🕐', label: 'Hours', value: '6:00 AM – 8:00 PM Daily' },
                       { icon: '📍', label: 'Location', value: 'Trading Center, Main Road' },
-                      { icon: '📱', label: 'Call Us', value: '+254 725 486 428' }
+                      { icon: '📱', label: 'Call Us', value: '+254 7XX XXX XXX' }
                     ].map((item, idx) => (
                       <div key={idx} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                         <div style={{ fontSize: '1.5rem' }}>{item.icon}</div>
@@ -787,7 +780,7 @@ export default function KenestJikoni() {
               >
                 <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1rem' }}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} fill={colors.secondary} color={colors.secondary} />
+                    <span key={i} style={{ fontSize: '1rem' }}>⭐</span>
                   ))}
                 </div>
                 <p style={{ color: colors.dark, marginBottom: '1.5rem', lineHeight: '1.7', fontSize: '0.95rem', fontStyle: 'italic' }}>
@@ -842,7 +835,7 @@ export default function KenestJikoni() {
               <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '2rem', color: colors.dark }}>Get In Touch</h3>
               {[
                 { icon: '📍', label: 'Location', value: 'Trading Center\nNear Bodaboda Stage' },
-                { icon: '📱', label: 'Phone', value: '+254 725 486 428', action: handleCallUs },
+                { icon: '📱', label: 'Phone', value: '+254 7XX XXX XXX', action: handleCallUs },
                 { icon: '🕐', label: 'Hours', value: '6:00 AM – 8:00 PM\nDaily' }
               ].map((item, idx) => (
                 <div 
@@ -959,7 +952,7 @@ export default function KenestJikoni() {
               e.target.style.boxShadow = commonStyles.shadowMedium;
             }}
           >
-            Visit Us Today <ArrowRight size={20} />
+            Visit Us Today →
           </button>
         </div>
       </section>
@@ -1013,7 +1006,7 @@ export default function KenestJikoni() {
             <div>
               <h4 style={{ fontWeight: '900', marginBottom: '1rem', fontSize: '1.1rem' }}>Contact</h4>
               <p style={{ color: '#999', fontSize: '0.95rem', cursor: 'pointer' }} onClick={handleCallUs}>
-                📱 +254 725 486 428<br />
+                📱 +254 7XX XXX XXX<br />
               </p>
               <p style={{ color: '#999', fontSize: '0.95rem' }}>📍 Trading Center</p>
             </div>
