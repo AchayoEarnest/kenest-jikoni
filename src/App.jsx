@@ -699,13 +699,13 @@ export default function KenestJikoni() {
             {[
               {
                 emoji: "👨‍🍳",
-                name: "Kennedy",
+                name: "Earnest",
                 title: "Master Chef",
                 desc: "5+ years perfecting street food",
               },
               {
                 emoji: "❤️",
-                name: "Earnest",
+                name: "Kennedy",
                 title: "Co-Founder",
                 desc: "Service & hygiene obsessed",
               },
